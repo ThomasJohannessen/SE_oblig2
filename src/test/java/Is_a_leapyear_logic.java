@@ -6,11 +6,9 @@ public class Is_a_leapyear_logic {
     public void is_the_logic_correct_for_random_year() {
         leapYearChecker inputYear = new leapYearChecker();
 
-        //int randomYear = 3654; //år 3654 er kontrollert, og er ikke et skuddår
-int randomYear = 2000;
+        int randomYear = 3654; //år 3654 er kontrollert, og er ikke et skuddår
         boolean actual = inputYear.isLeapYear(randomYear);
-        //boolean expected = false;
-        boolean expected = true;
+        boolean expected = false;
         Assertions.assertEquals(expected, actual);
     }
 }
