@@ -1,38 +1,28 @@
 package no.thomasj.leapYear;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class leapYearChecker {
     public static void main(String[] args) throws IOException {
-        /*leapYear prog = new leapYear();
-        System.out.println(prog.message());*/
 
-        leapYearChecker inputYear = new leapYearChecker();
+       leapYearChecker inputYear = new leapYearChecker();
 
-        int year =  Integer.parseInt(inputYear.getInput());
+       int year =  Integer.parseInt(inputYear.getInput());
 
-        boolean inputyear_leapyear_check = inputYear.isLeapYear(year);
+       boolean inputyear_leapyear_check = inputYear.isLeapYear(year);
 
-        if (inputyear_leapyear_check){
-            System.out.println("Året " + year + " er et skuddår. Husk å planlegg for den ekstra dagen 29.februar!");
-        }
-        else{
-            System.out.println("Året " + year + " er ikke et skuddår");
-        }
+       inputYear.output(year, inputyear_leapyear_check);
     }
 
-    /*public String message() {
-        return "Hello";
-    }*/
+
 
     public String getInput() throws IOException {
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+
+        Scanner Scnr = new Scanner(System.in);
         System.out.println("Skriv inn årstallet du ønsker å sjekke om er et skuddår: ");
-        String input_arstall = input.readLine();
+        String input_arstall = Scnr.nextLine();
         return input_arstall;
     }
-
 
     public boolean isLeapYear(int year) {
 
@@ -49,4 +39,13 @@ public class leapYearChecker {
         }
     }
 
+    public void output(int year, boolean result_from_checker){
+
+            if (result_from_checker){
+                System.out.println("Året " + year + " er et skuddår. Husk å planlegg for den ekstra dagen 29.februar!");
+            }
+            else{
+                System.out.println("Året " + year + " er ikke et skuddår");
+            }
+    }
 }
