@@ -25,13 +25,10 @@ public class leapYearChecker {
 
     public boolean isLeapYear(int year) {
 
-        if(((year % 400) != 0) && ((year % 100) == 0) || ((year % 4) != 0) || ((year % 4000) == 0)){
+        if (((year % 4) != 0) || ((year % 400) != 0) && ((year % 100) == 0) || ((year % 4000) == 0))
             return false;
-        }
-        else if (((year % 4) == 0) && ((year % 100) != 0) || ((year % 400) == 0)) {
+        else if (((year % 4) == 0) && ((year % 100) != 0) || ((year % 400) == 0))
             return true;
-        }
-
         else{
             System.out.println("Noe gikk galt og beregningen er ikke korrekt. Err: isLeapYear_Error");
             return false;
@@ -47,4 +44,5 @@ public class leapYearChecker {
                 System.out.println("Året " + year + " er ikke et skuddår");
             }
     }
+
 }
