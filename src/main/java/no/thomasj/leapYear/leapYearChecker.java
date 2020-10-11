@@ -1,9 +1,8 @@
 package no.thomasj.leapYear;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class leapYearChecker {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
        leapYearChecker inputYear = new leapYearChecker();
 
@@ -26,13 +25,13 @@ public class leapYearChecker {
 
     public boolean isLeapYear(int year) {
 
-        if (((year % 4) == 0) && ((year % 100) != 0) || ((year % 400) == 0)) {
+        if(((year % 400) != 0) && ((year % 100) == 0) || ((year % 4) != 0) || ((year % 4000) == 0)){
+            return false;
+        }
+        else if (((year % 4) == 0) && ((year % 100) != 0) || ((year % 400) == 0)) {
             return true;
         }
 
-        else if(((year % 400) != 0) && ((year % 100) == 0) || ((year % 4) != 0)){
-            return false;
-        }
         else{
             System.out.println("Noe gikk galt og beregningen er ikke korrekt. Err: isLeapYear_Error");
             return false;

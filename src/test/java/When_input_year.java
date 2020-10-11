@@ -1,8 +1,4 @@
-import no.thomasj.leapYear.leapYearChecker;
 import org.junit.jupiter.api.*;
-import java.io.IOException;
-
-
 
 public class When_input_year {
     @Test
