@@ -2,8 +2,6 @@ import no.thomasj.leapYear.leapYearChecker;
 import org.junit.jupiter.api.*;
 
 public class Is_a_leapyear {
-
-
     @Test
     public void is_a_year_devided_by_4_but_not_100_a_leapyear() {
         leapYearChecker inputYear = new leapYearChecker();

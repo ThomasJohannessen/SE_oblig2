@@ -12,7 +12,7 @@ public class leapYearChecker {
        //sender input inn og får returnert om det er skuddår ifa. en boolien
        boolean inputyear_leapyear_check = inputYear.isLeapYear(year);
 
-       //sender årstall og bollienen fra over til en ny funkjson som skriver ut resultatet i terminal.
+       //sender årstall og boolienen fra over til en ny funkjson som skriver ut resultatet i terminal.
        inputYear.output(year, inputyear_leapyear_check);
     }
 

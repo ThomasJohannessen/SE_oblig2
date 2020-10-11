@@ -29,7 +29,7 @@ public class Is_not_a_leapyear {
     public void is_a_year_devideble_by_4000_a_leapyear() {
         leapYearChecker inputYear = new leapYearChecker();
 
-        int year = 8000; //ikke delbart med 4000
+        int year = 8000; // delbart med 4000
 
         boolean actual = inputYear.isLeapYear(year);
         boolean expected = false;
