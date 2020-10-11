@@ -16,7 +16,7 @@ public class leapYearChecker {
 
 
 
-    public String getInput() throws IOException {
+    public String getInput() {
 
         Scanner Scnr = new Scanner(System.in);
         System.out.println("Skriv inn årstallet du ønsker å sjekke om er et skuddår: ");
